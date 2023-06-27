@@ -32,28 +32,24 @@ The MyToken contract code is organized as follows:
 5. The `mint` function takes an address and a value as parameters, increasing the total supply and the balance of the specified address.
 6. The `burn` function takes an address and a value as parameters, decreasing the total supply and the balance of the specified address. It includes conditionals to ensure the balance is sufficient for the amount to be burned.
 
-## Usage Example
+## Usage
 
-Here's an example of how you can interact with the MyToken contract:
+1. Deploy the MyToken contract to a supported Ethereum network.
 
-solidity
-// Deploy the MyToken contract with token details
-MyToken myToken = new MyToken("My Token", "MTK", 1000000);
+2. Once deployed, you can interact with the contract by calling the following functions:
 
-// Mint tokens to an address
-myToken.mint(address1, 100);
+  mint: Creates new tokens and assigns them to a specified address.
 
-// Burn tokens from an address
-myToken.burn(address2, 50);
+    Parameters:
+      _address: The address to which the tokens will be minted.
+      _value: The amount of tokens to be minted.
+  burn: Destroys existing tokens by reducing the total supply and the balance of a specified address.
 
+    Parameters:
+      _address: The address from which the tokens will be burned.
+      _value: The amount of tokens to be burned.
 
-In the above example, we deploy the MyToken contract with the token name "My Token", abbreviation "MTK", and an initial total supply of 1,000,000 tokens. We then mint 100 tokens to `address1` and burn 50 tokens from `address2`.
-
-## Authors
-
-Metacrafter Chris  
-Twitter: [@metacraftersio](https://twitter.com/metacraftersio)
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE.md file for details.
+This contract is licensed under the MIT License. SPDX-License-Identifier: MIT.
