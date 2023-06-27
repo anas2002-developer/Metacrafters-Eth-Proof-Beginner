@@ -1,0 +1,46 @@
+
+pragma solidity ^0.8.0;
+
+
+contract myNewContract{
+    uint newInt;  //this takes integer values as input.
+    string newString;  //this takes string values as input.
+    bool newBool;  //this takes boolean values as input.
+    address newAddress;  //this takes address as input.
+    
+    function setNewInt(uint _newInt) public returns (uint){
+        newInt = _newInt;
+        return newInt;
+    }
+    
+    function setNewString(string  memory _newString ) public  returns (string memory){
+        newString = _newString;
+        return newString;
+    } 
+    
+    function setBool(bool _newBool) public returns(bool){
+        newBool = _newBool;
+        return newBool;
+    }
+    
+    function setAddress(address _newAddress) public returns (address){
+        newAddress = _newAddress;
+        return newAddress;
+    }
+    
+    function getNewInt() public view returns (uint){
+        return newInt;
+    }
+    
+    function getNewString() public view returns(string memory){
+        return newString;
+    }
+  
+    function getBool() public view returns(bool){
+        return newBool;
+    }
+  
+    function getAddress() public view returns (address){
+        return newAddress;
+    }
+}
